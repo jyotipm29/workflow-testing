@@ -11,4 +11,4 @@
         has_text:
           text: 'mean_test_score'
         has_n_columns:
-          n: "12"
+          n: "13"

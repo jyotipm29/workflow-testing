@@ -5,11 +5,11 @@
   "name": "ARD_Regressor_Testing",
   "steps": {
     "0": {
-      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_build_pipeline/sklearn_build_pipeline/0.9",
-      "tool_version": "0.9",
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_build_pipeline/sklearn_build_pipeline/1.0.11.0",
+      "tool_version": "1.0.11.0",
       "outputs": [
         {
-          "type": "zip",
+          "type": "h5mlm",
           "name": "outfile"
         }
       ],
@@ -19,7 +19,7 @@
       "id": 0,
       "tool_shed_repository": {
         "owner": "bgruening",
-        "changeset_revision": "242ca5bcd403",
+        "changeset_revision": "4c4ec859c31a",
         "name": "sklearn_build_pipeline",
         "tool_shed": "toolshed.g2.bx.psu.edu"
       },
@@ -40,7 +40,7 @@
         "left": 173
       },
       "annotation": "",
-      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_build_pipeline/sklearn_build_pipeline/0.9",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_build_pipeline/sklearn_build_pipeline/1.0.11.0",
       "type": "tool"
     },
     "1": {
@@ -70,15 +70,15 @@
       "type": "data_input"
     },
     "2": {
-      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_searchcv/sklearn_searchcv/0.9",
-      "tool_version": "0.9",
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_searchcv/sklearn_searchcv/1.0.11.0",
+      "tool_version": "1.0.11.0",
       "outputs": [
         {
           "type": "tabular",
           "name": "outfile_result"
         },
         {
-          "type": "zip",
+          "type": "h5mlm",
           "name": "outfile_estimator"
         }
       ],
@@ -90,7 +90,7 @@
         }
       ],
       "input_connections": {
-        "search_schemes|infile_pipeline": {
+        "infile_estimator": {
           "output_name": "outfile",
           "id": 0
         },
@@ -103,11 +103,11 @@
           "id": 1
         }
       },
-      "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"save\": \"\\\"true\\\"\", \"search_schemes\": \"{\\\"search_params_builder\\\": {\\\"param_set\\\": [{\\\"__index__\\\": 0, \\\"search_param_selector\\\": {\\\"search_p\\\": \\\"fit_intercept: [True, False]\\\", \\\"__current_case__\\\": 0, \\\"selected_param_type\\\": \\\"final_estimator_p\\\"}}]}, \\\"selected_search_scheme\\\": \\\"GridSearchCV\\\", \\\"infile_pipeline\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"options\\\": {\\\"scoring\\\": {\\\"secondary_scoring\\\": null, \\\"__current_case__\\\": 26, \\\"primary_scoring\\\": \\\"r2\\\"}, \\\"verbose\\\": \\\"0\\\", \\\"refit\\\": \\\"true\\\", \\\"return_train_score\\\": \\\"false\\\", \\\"iid\\\": \\\"true\\\", \\\"error_score\\\": \\\"false\\\", \\\"pre_dispatch\\\": \\\"all\\\", \\\"cv\\\": \\\"KFold(n_splits=3, shuffle=True, random_state=3111696)\\\"}, \\\"__current_case__\\\": 0}\", \"input_options\": \"{\\\"infile2\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"infile1\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"column_selector_options_1\\\": {\\\"col1\\\": \\\"target\\\", \\\"__current_case__\\\": 3, \\\"selected_column_selector_option\\\": \\\"all_but_by_header_name\\\"}, \\\"column_selector_options_2\\\": {\\\"selected_column_selector_option2\\\": \\\"by_header_name\\\", \\\"col2\\\": \\\"target\\\", \\\"__current_case__\\\": 1}, \\\"header2\\\": \\\"true\\\", \\\"header1\\\": \\\"true\\\", \\\"__current_case__\\\": 0, \\\"selected_input\\\": \\\"tabular\\\"}\"}",
+      "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"infile_estimator\": {\"__class__\": \"ConnectedValue\"}, \"input_options\": {\"selected_input\": \"tabular\", \"__current_case__\": 0, \"infile1\": {\"__class__\": \"ConnectedValue\"}, \"header1\": true, \"column_selector_options_1\": {\"selected_column_selector_option\": \"all_but_by_header_name\", \"__current_case__\": 3, \"col1\": \"target\"}, \"infile2\": {\"__class__\": \"ConnectedValue\"}, \"header2\": true, \"column_selector_options_2\": {\"selected_column_selector_option2\": \"by_header_name\", \"__current_case__\": 2, \"col2\": \"target\"}}, \"is_deep_learning\": false, \"options\": {\"scoring\": {\"primary_scoring\": \"default\", \"__current_case__\": 0}, \"cv_selector\": {\"selected_cv\": \"default\", \"__current_case__\": 0, \"n_splits\": \"5\"}, \"verbose\": \"0\", \"error_score\": true, \"return_train_score\": false}, \"outer_split\": {\"split_mode\": \"no\", \"__current_case__\": 0}, \"save\": \"save_estimator\", \"search_algos\": {\"selected_search_algo\": \"GridSearchCV\", \"__current_case__\": 0}, \"search_params_builder\": {\"param_set\": []}, \"search_schemes\": {\"__current_case__\": 0, \"infile_pipeline\": {\"__class__\": \"RuntimeValue\"}, \"options\": {\"cv\": \"KFold(n_splits=3, shuffle=True, random_state=3111696)\", \"error_score\": \"false\", \"iid\": \"true\", \"pre_dispatch\": \"all\", \"refit\": \"true\", \"return_train_score\": \"false\", \"scoring\": {\"__current_case__\": 26, \"primary_scoring\": \"r2\", \"secondary_scoring\": null}, \"verbose\": \"0\"}, \"search_params_builder\": {\"param_set\": [{\"__index__\": 0, \"search_param_selector\": {\"__current_case__\": 0, \"search_p\": \"fit_intercept: [True, False]\", \"selected_param_type\": \"final_estimator_p\"}}]}, \"selected_search_scheme\": \"GridSearchCV\"}}",
       "id": 2,
       "tool_shed_repository": {
         "owner": "bgruening",
-        "changeset_revision": "0987bc3904a0",
+        "changeset_revision": "7626ea9c2e1b",
         "name": "sklearn_searchcv",
         "tool_shed": "toolshed.g2.bx.psu.edu"
       },
@@ -124,10 +124,6 @@
       "label": null,
       "inputs": [
         {
-          "name": "search_schemes",
-          "description": "runtime parameter for tool Hyperparameter Search"
-        },
-        {
           "name": "input_options",
           "description": "runtime parameter for tool Hyperparameter Search"
         },
@@ -141,7 +137,7 @@
         "left": 425.5
       },
       "annotation": "",
-      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_searchcv/sklearn_searchcv/0.9",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_searchcv/sklearn_searchcv/1.0.11.0",
       "type": "tool"
     }
   },
